@@ -389,6 +389,64 @@ export default function Home() {
                         ✨ <strong style={{ color: C.brown }}>These calculations are based on my personal formula</strong>, tested across different yarn sizes and measurements. Small variations of up to 1 cm are completely normal - every yarn is different, everyone crochets differently, with different hooks and different tension. The calculator gives you the closest possible result, but 100% precision isn't possible unless we all crochet with the exact same yarn, hook, and tension. 😊 Always check your size before the last round!
                       </p>
                     </div>
+
+                    {/* Recommended Videos */}
+                    {(() => {
+                      const videos = {
+                        circle: [
+                          { id: 'g841Ep-z834', label: 'Lesson 2 - Magic ring + Invisible join' },
+                          { id: 'BOlz_MiFUf0', label: 'Lesson 3 - Second round of circular base' },
+                          { id: 'gQFpI-fgbNY', label: 'Lesson 4 - How to crochet a circular base' },
+                          { id: 'EJxBoeTbuDw', label: 'Lesson 10 - Finishing round of the base' },
+                          { id: 'JnS4PZB-HD8', label: 'Bonus 3 - Trick for bases that curl' },
+                        ],
+                        square: [
+                          { id: 'g841Ep-z834', label: 'Lesson 2 - Magic ring + Invisible join' },
+                          { id: 'IKMsXQQdaIE', label: 'Lesson 6 - How to crochet a square base' },
+                          { id: 'EJxBoeTbuDw', label: 'Lesson 10 - Finishing round of the base' },
+                          { id: 'D50SO2_wKoc', label: 'Bonus 4 - How to crochet corners' },
+                          { id: 'JnS4PZB-HD8', label: 'Bonus 3 - Trick for bases that curl' },
+                        ],
+                        triangle: [
+                          { id: 'g841Ep-z834', label: 'Lesson 2 - Magic ring + Invisible join' },
+                          { id: 'FJXBAoBMmjE', label: 'Lesson 5 - How to crochet a triangular base' },
+                          { id: 'EJxBoeTbuDw', label: 'Lesson 10 - Finishing round of the base' },
+                          { id: 'JnS4PZB-HD8', label: 'Bonus 3 - Trick for bases that curl' },
+                        ],
+                        rectangle: [
+                          { id: 'RpPcD6Rso4k', label: 'Lesson 7 - Starting a rectangular base' },
+                          { id: 'xax-xhEmKZM', label: 'Lesson 8 - How to crochet a rectangular base' },
+                          { id: 'EJxBoeTbuDw', label: 'Lesson 10 - Finishing round of the base' },
+                          { id: '-jZlnGqpKwk', label: 'Bonus 2 - Filling holes in the center' },
+                          { id: 'JnS4PZB-HD8', label: 'Bonus 3 - Trick for bases that curl' },
+                        ],
+                        oval: [
+                          { id: 'RpPcD6Rso4k', label: 'Lesson 7 - Starting an oval base' },
+                          { id: 'CvvWgcUkvU0', label: 'Lesson 9 - How to crochet an oval base' },
+                          { id: 'EJxBoeTbuDw', label: 'Lesson 10 - Finishing round of the base' },
+                          { id: '-jZlnGqpKwk', label: 'Bonus 2 - Filling holes in the center' },
+                          { id: 'JnS4PZB-HD8', label: 'Bonus 3 - Trick for bases that curl' },
+                        ],
+                      }[shape] || [];
+                      return videos.length ? (
+                        <div style={{ marginTop: 24 }}>
+                          <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: '.1em', textTransform: 'uppercase', color: C.gold, marginBottom: 14 }}>🎬 Recommended lessons for this shape</p>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                            {videos.map(v => (
+                              <div key={v.id} className="card" style={{ background: '#fff', border: `1px solid ${C.line}`, borderRadius: 14, overflow: 'hidden' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 14px' }}>
+                                  <img src={`https://i.ytimg.com/vi/${v.id}/default.jpg`} style={{ width: 80, height: 45, objectFit: 'cover', borderRadius: 8, flexShrink: 0 }} alt={v.label} />
+                                  <div style={{ flex: 1 }}>
+                                    <p style={{ fontSize: 12.5, fontWeight: 600, color: C.brown, margin: 0 }}>{v.label}</p>
+                                  </div>
+                                  <button onClick={() => { setSection('lessons'); setTimeout(() => { const el = document.getElementById(v.id); if(el) el.scrollIntoView({behavior:'smooth'}); }, 100); }} style={{ padding: '6px 12px', borderRadius: 8, border: `1px solid ${C.gold}`, background: 'transparent', color: C.gold, fontFamily: 'Montserrat', fontSize: 11, fontWeight: 600, cursor: 'pointer', flexShrink: 0 }}>Watch →</button>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ) : null;
+                    })()}
                   </div>
                 )}
               </div>

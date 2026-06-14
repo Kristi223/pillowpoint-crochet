@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  --cream: #FDFAF5;
+  --blush: #F0DDD6;
+  --gold: #C9A96E;
+  --brown: #6B4C3B;
+  --brown2: rgba(107,76,59,.6);
+  --line: rgba(107,76,59,.13);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--cream);
+  color: var(--brown);
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: .06em;
+  background: var(--brown);
+  color: var(--cream);
+  border: none;
+  border-radius: 999px;
+  padding: 14px 28px;
+  cursor: pointer;
+  transition: .25s;
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+}
+.btn:hover { background: var(--gold); transform: translateY(-1px); }
+.btn.gold { background: var(--gold); }
+.btn.ghost { background: transparent; color: var(--brown); border: 1.5px solid var(--brown); }
+.btn.ghost:hover { background: var(--brown); color: var(--cream); }

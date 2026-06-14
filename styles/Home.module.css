@@ -1,0 +1,111 @@
+.page { min-height: 100vh; }
+
+/* Header */
+.header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 48px; border-bottom: 1px solid var(--line);
+  position: sticky; top: 0; background: rgba(253,250,245,.95);
+  backdrop-filter: blur(8px); z-index: 100;
+}
+.logo {
+  font-family: 'Dancing Script', cursive; font-size: 28px;
+  font-weight: 700; color: var(--brown);
+}
+.logo span { color: var(--gold); }
+.nav { display: flex; gap: 12px; align-items: center; }
+
+/* Hero */
+.hero {
+  max-width: 860px; margin: 0 auto;
+  padding: 72px 48px 60px; text-align: center;
+}
+.heroKicker {
+  font-size: 10px; letter-spacing: .3em; text-transform: uppercase;
+  color: var(--gold); font-weight: 600; margin-bottom: 18px;
+}
+.heroTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 4vw, 48px); font-weight: 600;
+  line-height: 1.2; margin-bottom: 20px;
+}
+.heroTitle em { font-style: italic; color: var(--gold); }
+.heroText {
+  font-size: 15px; color: var(--brown2); line-height: 1.8;
+  max-width: 600px; margin: 0 auto 32px;
+}
+.heroActions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.earlybird {
+  margin-top: 20px; font-size: 13px; color: var(--brown2);
+  background: var(--blush); border-radius: 999px;
+  display: inline-block; padding: 8px 20px;
+}
+
+/* Features */
+.features { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 60px 48px; }
+.featureGrid { max-width: 860px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; }
+.feature { text-align: center; }
+.featureIcon { font-size: 32px; margin-bottom: 12px; }
+.feature h3 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+.feature p { font-size: 13px; color: var(--brown2); line-height: 1.6; }
+
+/* Pricing */
+.pricing { padding: 60px 48px; display: flex; justify-content: center; }
+.priceCard {
+  background: #fff; border: 1px solid var(--line); border-radius: 20px;
+  padding: 36px; max-width: 420px; width: 100%; text-align: center;
+  box-shadow: 0 20px 50px -30px rgba(107,76,59,.4);
+  position: relative;
+}
+.priceBadge {
+  display: inline-block; background: var(--gold); color: #fff;
+  font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  border-radius: 999px; padding: 5px 16px; margin-bottom: 20px;
+}
+.priceAmount { margin-bottom: 24px; }
+.priceOld { font-size: 18px; color: var(--brown2); text-decoration: line-through; margin-right: 10px; }
+.priceNew { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; color: var(--brown); }
+.priceList { list-style: none; text-align: left; margin-bottom: 24px; }
+.priceList li { padding: 8px 0; font-size: 14px; border-bottom: 1px solid var(--line); color: var(--brown2); }
+.priceList li:last-child { border: none; }
+.priceNote { font-size: 12px; color: var(--brown2); margin-top: 12px; }
+
+/* Footer */
+.footer { text-align: center; padding: 40px 24px; border-top: 1px solid var(--line); }
+.footerLogo { font-family: 'Dancing Script', cursive; font-size: 22px; font-weight: 700; color: var(--brown); margin-bottom: 6px; }
+.footer p { font-size: 12px; color: var(--brown2); }
+
+/* Modal */
+.modalOverlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,.55);
+  display: grid; place-items: center; z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+.modal {
+  background: var(--cream); border-radius: 20px; padding: 40px;
+  width: 100%; max-width: 460px; margin: 20px;
+  position: relative; box-shadow: 0 30px 80px rgba(0,0,0,.3);
+}
+.modalClose {
+  position: absolute; top: 16px; right: 20px;
+  background: none; border: none; font-size: 28px; cursor: pointer;
+  color: var(--brown2); line-height: 1;
+}
+.modal h2 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; margin-bottom: 8px; }
+.modalSub { font-size: 13px; color: var(--brown2); margin-bottom: 24px; }
+.formLabel { display: block; font-size: 11.5px; font-weight: 600; letter-spacing: .08em; color: var(--brown2); margin-bottom: 6px; margin-top: 14px; }
+.formInput {
+  width: 100%; padding: 11px 14px; border: 1.5px solid var(--line);
+  border-radius: 10px; font-family: 'Montserrat'; font-size: 14px;
+  color: var(--brown); background: #fff; margin-bottom: 4px;
+}
+.formInput:focus { outline: none; border-color: var(--gold); }
+.formError { color: #c0392b; font-size: 12.5px; margin: 6px 0; }
+.modalNote { font-size: 11.5px; color: var(--brown2); text-align: center; margin-top: 14px; }
+
+@media (max-width: 600px) {
+  .header { padding: 16px 20px; }
+  .hero { padding: 40px 20px; }
+  .features { padding: 40px 20px; }
+  .pricing { padding: 40px 20px; }
+  .modal { padding: 28px 22px; }
+}

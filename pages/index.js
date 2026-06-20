@@ -26,6 +26,7 @@ const LESSONS = [
   { id: "P78srrHJwNY", title: "Starting a basket with a narrow-hole base", tag: "Bonus 10", desc: "Special technique for bases with narrower holes - no more tangled fingers! 🧵", free: true },
   { id: "pAEyUNAs-eE", title: "How to change colors", tag: "Bonus 11", desc: "Learn how to change yarn colors beautifully and without visible knots. 🌈", free: true },
   { id: "sOB5yXzReQI", title: "Heart-shaped color change", tag: "Bonus 12", desc: "Special technique for changing colors in a heart shape - for unique and beautiful projects. 💙", free: true },
+  { id: "HMzAUTkvLEM", title: "Finishing the basket - last round", tag: "Bonus 13", desc: "Invisible finish on the walls - learn how to close the basket so the end does not show anywhere. 🪄", free: true },
 ];
 
 const CIRC_SIZES = [3.5, 6.0, 7.8, 9.8, 11.5, 13.3, 15.2, 17.0, 18.9, 20.6];
@@ -178,7 +179,7 @@ export default function Home() {
     <>
       <Head>
         <title>PillowPoint Crochet | Learn to Crochet Baskets with T-Shirt Yarn</title>
-        <meta name="description" content="Learn to crochet beautiful baskets with t-shirt yarn. 22 video lessons, interactive base calculator for 5 shapes, and step-by-step instructions. PillowPoint method by Kristina." />
+        <meta name="description" content="Learn to crochet beautiful baskets with t-shirt yarn. 23 video lessons, interactive base calculator for 5 shapes, and step-by-step instructions. PillowPoint method by Kristina." />
         <meta name="keywords" content="crochet basket, t-shirt yarn, crochet base calculator, learn crochet, basket pattern, macaron yarn, crochet for beginners" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
